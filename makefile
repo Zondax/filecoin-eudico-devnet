@@ -135,7 +135,7 @@ delete_all: delete_monitoring delete_deployment
 .PHONY: delete_all
 
 scale_deployment:
-	k3s kubectl scale --replicas=$(SCALE) -f ./deploy/deployment.yaml
+	kubectl scale --replicas=$(SCALE) -f ./deploy/deployment.yaml
 .PHONY: scale_deployment
 
 expose_grafana:
